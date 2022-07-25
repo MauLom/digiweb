@@ -6,15 +6,20 @@ import Stack from '@mui/material/Stack';
 
 const Home = () => {
 
+
+    const estiloCaja ={
+        backgroundColor:"red"
+    }
+
     return (
         <Box>
-            <Stack direction="Row">
-                <div>
-                HOLA
+            <Stack sx={estiloCaja} direction="Row">
+                <div className="">
+                    Otro texto
                 </div>
             </Stack>
         </Box>
-        
+
     )
 
 }
