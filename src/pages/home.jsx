@@ -5,20 +5,23 @@ import Box from '@mui/material/Box';
 import Skeleton from '@mui/material/Skeleton';
 
 import Stack from '@mui/material/Stack';
-import { Button,Grid } from "@mui/material";
+import { Button, Grid } from "@mui/material";
 import ButtonGroup from '@mui/material/ButtonGroup';
 
 
 
 const Home = () => {
 
+    const styles = {
+        estiloCaja: {
+            backgroundColor: "black",
+            width: "absolute",
+            height: "50px"
 
-    const estiloCaja = {
-        backgroundColor: "black",
-        width: "absolute",
-        height: "50px"
-
+        }
     }
+
+
     const imgprincipal = {
         backgroundSize: "cover",
         display: "flex",
@@ -36,10 +39,9 @@ const Home = () => {
 
 
     }
-    
     const btngroup = {
         backgroundColor: "black",
-        backgroundSize:"absolute",
+        backgroundSize: "absolute",
         justifyContent: "center",
         width: "absolute"
     }
@@ -52,11 +54,11 @@ const Home = () => {
         alignItems: "center",
         justifyContent: "center",
         paddingTop: "18%",
-        height:"70%",
-        width:"70%",
+        height: "70%",
+        width: "70%",
         backgroundImage: "url(https://png.pngtree.com/png-clipart/20201209/original/pngtree-christmas-unboxing-day-png-image_5680724.jpg)",
         backgroundSize: "cover",
-        backgroundPosition:"50%"
+        backgroundPosition: "50%"
 
 
     }
@@ -64,11 +66,11 @@ const Home = () => {
         alignItems: "center",
         justifyContent: "center",
         paddingTop: "18%",
-        height:"80%",
-        width:"80%",
+        height: "80%",
+        width: "80%",
         backgroundImage: "url(https://elvortex.com/wp-content/uploads/2020/06/Digimon-Adventure-Regresa-FT.jpg)",
         backgroundSize: "cover",
-        backgroundPosition:"50%"
+        backgroundPosition: "50%"
 
 
     }
@@ -76,15 +78,15 @@ const Home = () => {
         alignItems: "center",
         justifyContent: "center",
         paddingTop: "18%",
-        height:"80%",
-        width:"80%",
+        height: "80%",
+        width: "80%",
         backgroundImage: "url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6qXDhYwZl_0h31lfOqoitJrSbZEkUzCQukA&usqp=CAU)",
         backgroundSize: "cover",
-        backgroundPosition:"50%"
+        backgroundPosition: "50%"
 
 
     }
-    const gridcon={
+    const gridcon = {
         alignContent: "spaceBetween"
 
     }
@@ -94,7 +96,7 @@ const Home = () => {
         <Box>
 
 
-            <Stack sx={estiloCaja} direction="Row">
+            <Stack sx={styles.estiloCaja} direction="Row">
                 <div className="" >
                 </div >
 
@@ -115,38 +117,53 @@ const Home = () => {
             <br />
             <Grid container>
                 <Grid item xs={12} lg={4}>
-                <p><img src="https://i.pinimg.com/originals/14/6e/fd/146efd0e37739caff3bc9d8c3a74cdcd.jpg" height="224px" width="80%" alt="" /> <br /><br /><center><Skeleton sx={seccion} animation="wave" /></center><br /><center><Skeleton sx={seccion} animation="wave" /></center><br /><center><Skeleton sx={seccion} animation="wave" /></center></p>
+                    <p><img src="https://i.pinimg.com/originals/14/6e/fd/146efd0e37739caff3bc9d8c3a74cdcd.jpg" height="224px" width="80%" alt="" /> <br /><br /><center><Skeleton sx={seccion} animation="wave" /></center><br /><center><Skeleton sx={seccion} animation="wave" /></center><br /><center><Skeleton sx={seccion} animation="wave" /></center></p>
                 </Grid>
                 <Grid item xs={12} lg={4}>
-                <p><img src="https://i.pinimg.com/originals/14/6e/fd/146efd0e37739caff3bc9d8c3a74cdcd.jpg" height="224px" width="80%" alt="" /> <br /><br /><center><Skeleton sx={seccion} animation="wave" /></center><br /><center><Skeleton sx={seccion} animation="wave" /></center><br /><center><Skeleton sx={seccion} animation="wave" /></center></p>
+                    <p><img src="https://i.pinimg.com/originals/14/6e/fd/146efd0e37739caff3bc9d8c3a74cdcd.jpg" height="224px" width="80%" alt="" /> <br /><br /><center><Skeleton sx={seccion} animation="wave" /></center><br /><center><Skeleton sx={seccion} animation="wave" /></center><br /><center><Skeleton sx={seccion} animation="wave" /></center></p>
                 </Grid>
                 <Grid item xs={12} lg={4}>
-                <p><img src="https://i.pinimg.com/originals/14/6e/fd/146efd0e37739caff3bc9d8c3a74cdcd.jpg" height="224px" width="80%" alt="" /> <br /><br /><center><Skeleton sx={seccion} animation="wave" /></center><br /><center><Skeleton sx={seccion} animation="wave" /></center><br /><center><Skeleton sx={seccion} animation="wave" /></center></p>
+                    <p><img src="https://i.pinimg.com/originals/14/6e/fd/146efd0e37739caff3bc9d8c3a74cdcd.jpg" height="224px" width="80%" alt="" /> <br /><br /><center><Skeleton sx={seccion} animation="wave" /></center><br /><center><Skeleton sx={seccion} animation="wave" /></center><br /><center><Skeleton sx={seccion} animation="wave" /></center></p>
                 </Grid>
-                
+
 
 
             </Grid>
             <Grid>
                 <Grid sx={btngroup} item xs={12} lg={12}>
-                    <p><ButtonGroup sx={btng2} variant="contained" color="error" aria-label="outlined primary button group">
-                        <Button>Rank</Button>
-                        <Button>Name</Button>
-                        <Button>Vocation</Button>
-                        <Button>Level</Button>
-                        <Button>Server</Button>
-                    </ButtonGroup><br /> <br />
-                        <img src="https://img2.rtve.es/im/5829788/?w=900" height="50%" width="80%" alt="" />
-                        </p>
+                    {/* <p> */}
+                    {/* <ButtonGroup sx={btng2} variant="contained" color="error" aria-label="outlined primary button group">
+                            <Button>Rank</Button>
+                            <Button>Name</Button>
+                            <Button>Vocation</Button>
+                            <Button>Level</Button>
+                            <Button>Server</Button>
+                        </ButtonGroup><br /> <br /> */}
+                    <Grid container sx={{ width: "100%" }} justifyContent="center">
+                        <Stack direction="column" justifyContent="center"
+                            alignItems="center">
+                            <Stack direction="row">
+                                <Button>Rank</Button>
+                                <Button>Name</Button>
+                                <Button>Vocation</Button>
+                                <Button>Level</Button>
+                                <Button>Server</Button>
+                            </Stack>
+                            <Box sx={{width:"100%"}}>
+                                <img src="https://img2.rtve.es/im/5829788/?w=900" height="50%" width="80%" alt="" />
+                            </Box>
+                        </Stack>
+                    </Grid>
+                    {/* </p> */}
                 </Grid>
             </Grid>
-            
+
             <Box>
-                
+
                 <br />
                 <Grid sx={gridcon} container>
-                   <p></p>
-                    <Grid sx={i1} item xs={12} lg={4 }><Button variant="contained" color="error" size="large">Download</Button><br /><br /></Grid>
+                    <p></p>
+                    <Grid sx={i1} item xs={12} lg={4}><Button variant="contained" color="error" size="large">Download</Button><br /><br /></Grid>
                     <Grid sx={i2} item xs={12} lg={4}><Button variant="contained" color="error" size="large">Download</Button><br /><br /></Grid>
                     <Grid sx={i3} item xs={12} lg={4}><Button variant="contained" color="error" size="large">Download</Button><br /><br /></Grid>
 
@@ -158,7 +175,7 @@ const Home = () => {
 
                 </Grid>
 
-                
+
                 <br />
 
 
