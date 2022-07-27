@@ -7,11 +7,14 @@ import Skeleton from '@mui/material/Skeleton';
 import Stack from '@mui/material/Stack';
 import { Button, Grid } from "@mui/material";
 import ButtonGroup from '@mui/material/ButtonGroup';
-
+import TablaRankings from "../components/tablaRankings";
+import TextField from "@mui/material/TextField";
 
 
 const Home = () => {
+    const [userName, setUserName] = React.useState('')
 
+    const [costoDeProducto, setCostoDeProducto] = React.useState(0)
     const styles = {
         estiloCaja: {
             backgroundColor: "black",
@@ -20,6 +23,12 @@ const Home = () => {
 
         }
     }
+
+    const handlChangeUserName = (event) => {
+        setUserName(event.target.value)
+    }
+
+
 
 
     const imgprincipal = {
@@ -130,6 +139,12 @@ const Home = () => {
 
             </Grid>
             <Grid>
+                <TextField label="Usuario" placeholder="usuario" value={userName} onChange={(e) => {handlChangeUserName(e)}} />
+                <Box>el usuario es: {userName}</Box>
+
+
+                <TextField label="Costo de producto" placeholder="Costo de producto" value={costoDeProducto} onChange={(e) => {setCostoDeProducto(e)}} />
+                <Box>Costo mas IVA {costoDeProducto * 1.16}</Box>
                 <Grid sx={btngroup} item xs={12} lg={12}>
                     {/* <p> */}
                     {/* <ButtonGroup sx={btng2} variant="contained" color="error" aria-label="outlined primary button group">
@@ -139,7 +154,7 @@ const Home = () => {
                             <Button>Level</Button>
                             <Button>Server</Button>
                         </ButtonGroup><br /> <br /> */}
-                    <Grid container sx={{ width: "100%" }} justifyContent="center">
+                    {/* <Grid container sx={{ width: "100%" }} justifyContent="center">
                         <Stack direction="column" justifyContent="center"
                             alignItems="center">
                             <Stack direction="row">
@@ -153,7 +168,8 @@ const Home = () => {
                                 <img src="https://img2.rtve.es/im/5829788/?w=900" height="50%" width="80%" alt="" />
                             </Box>
                         </Stack>
-                    </Grid>
+                    </Grid> */}
+                    <TablaRankings />
                     {/* </p> */}
                 </Grid>
             </Grid>
