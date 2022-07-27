@@ -14,7 +14,7 @@ import TextField from "@mui/material/TextField";
 const Home = () => {
     const [userName, setUserName] = React.useState('')
 
-    const [costoDeProducto, setCostoDeProducto] = React.useState(0)
+    const [costoDeProducto, setCostoDeProducto] = React.useState(15)
     const styles = {
         estiloCaja: {
             backgroundColor: "black",
@@ -143,8 +143,8 @@ const Home = () => {
                 <Box>el usuario es: {userName}</Box>
 
 
-                <TextField label="Costo de producto" placeholder="Costo de producto" value={costoDeProducto} onChange={(e) => {setCostoDeProducto(e)}} />
-                <Box>Costo mas IVA {costoDeProducto * 1.16}</Box>
+                <TextField  label="Costo de producto" placeholder="Costo de producto" value={costoDeProducto} onChange={(e) => {setCostoDeProducto(e)}} />
+                <Box>Costo mas IVA {Number.parseInt(costoDeProducto) * 1.16}</Box>
                 <Grid sx={btngroup} item xs={12} lg={12}>
                     {/* <p> */}
                     {/* <ButtonGroup sx={btng2} variant="contained" color="error" aria-label="outlined primary button group">
