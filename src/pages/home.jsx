@@ -146,7 +146,7 @@ const Home = () => {
                 <br />
                 <Grid sx={gridcon} container>
                    <p></p>
-                    <Grid sx={i1} item xs={12} lg={4}><Button variant="contained" color="error" size="large">Download</Button><br /><br /></Grid>
+                    <Grid sx={i1} item xs={12} lg={4 }><Button variant="contained" color="error" size="large">Download</Button><br /><br /></Grid>
                     <Grid sx={i2} item xs={12} lg={4}><Button variant="contained" color="error" size="large">Download</Button><br /><br /></Grid>
                     <Grid sx={i3} item xs={12} lg={4}><Button variant="contained" color="error" size="large">Download</Button><br /><br /></Grid>
 
