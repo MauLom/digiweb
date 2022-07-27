@@ -145,6 +145,7 @@ const Home = () => {
 
                 <TextField  label="Costo de producto" placeholder="Costo de producto" value={costoDeProducto} onChange={(e) => {setCostoDeProducto(e)}} />
                 <Box>Costo mas IVA {Number.parseInt(costoDeProducto) * 1.16}</Box>
+                
                 <Grid sx={btngroup} item xs={12} lg={12}>
                     {/* <p> */}
                     {/* <ButtonGroup sx={btng2} variant="contained" color="error" aria-label="outlined primary button group">
