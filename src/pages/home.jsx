@@ -17,37 +17,38 @@ const Home = () => {
 
     const [costoDeProducto, setCostoDeProducto] = React.useState(15)
     const styles = {
-        styleBox: {
-            backgroundColor: "black",
-            width: "absolute",
-            height: "50px",
+        mainimage: {
+            backgroundSize: "cover",
+            height: "850px",
+            backgroundImage: "url(https://wallpapercave.com/wp/bkiwp42.jpg)",
+            width: "100%"
+
+        },
+        menubuttons: {
             alignItems: "left",
             justifyContent: "left",
 
-        },
-        mainimage: {
-            backgroundSize: "cover",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            paddingTop: "18%",
-            height: "500px",
-            backgroundImage: "url(https://wallpapercave.com/wp/bkiwp42.jpg)",
-            width: "absolute"
 
         },
-        section:{
-            width: "80%",
-        alignContent: "spaceBetween"
+        buttondownload: {
+            paddingTop:"20%",
+            alignItems: "center",
+            justifyContent: "center",
+            width: "100%"
+
         },
-        btngroup:{
+        section: {
+            width: "80%",
+            alignContent: "spaceBetween"
+        },
+        btngroup: {
             backgroundColor: "black",
             backgroundSize: "cover",
-            
-            width: "cover"  
+
+            width: "cover"
         },
-        gridcontent:{
-            alignContent: "spaceBetween" 
+        gridcontent: {
+            alignContent: "spaceBetween"
         }
 
     }
@@ -59,25 +60,20 @@ const Home = () => {
 
     return (
         <Box>
-
-
-            <Stack sx={styles.styleBox} direction="Row">
-                <Header />
-
-            </Stack>
-
-
-            <Stack sx={styles.mainimage} direction="Row">
-                <div>
-                    <br />
-                    <br />
-                    <br />
-                    <br />
+            <Grid sx={styles.mainimage} container>
+                <Grid item xs={12} lg={12}><Stack sx={styles.menubuttons} direction="Row">
+                    <Header />
+                </Stack>
+                </Grid>
+                <Grid itme xs={12} lg={12}>
+                <Stack sx={styles.buttondownload} direction="Row">
                     <Button variant="contained" color="error" size="large">Download</Button>
 
-                </div>
+                </Stack>
+                </Grid>
 
-            </Stack>
+            </Grid>
+
             <br />
             <Grid container>
                 <Grid item xs={12} lg={4}>
@@ -135,7 +131,7 @@ const Home = () => {
                 <br />
                 <SectionBuy />
                 <br />
-                
+
 
 
                 <br />

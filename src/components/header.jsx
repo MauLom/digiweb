@@ -1,8 +1,16 @@
 import * as React from 'react'
-import { Button, ButtonGroup, TextField, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from '@mui/material';
+import { Stack,Button, ButtonGroup, TextField, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from '@mui/material';
 
 
 const Header = () => {
+  const styles={
+    
+    Stylediv:{
+      alignItems: "left",
+       justifyContent: "left",
+       width:"100%"
+    }
+  }
 
   const [open, setOpen] = React.useState(false);
 
@@ -16,14 +24,17 @@ const Header = () => {
 
   return (
     <div>
-      <br />
+      <Stack sx={styles.Stylediv} direction="Row">
       <ButtonGroup variant="text" aria-label="text button group">
         <Button onClick={handleClickOpen}><font color="white">Login</font></Button>
         <Button><font color="white">Forum</font></Button>
         <Button><font color="white">Market</font></Button>
         <Button><font color="white">News</font></Button>
-
       </ButtonGroup>
+      </Stack>
+      <br />
+      <br />
+      
       <Dialog open={open} onClose={handleClose}>
 
         <center><DialogTitle>Login to Account <br /><hr /></DialogTitle></center>
