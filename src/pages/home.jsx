@@ -6,8 +6,9 @@ import Skeleton from '@mui/material/Skeleton';
 
 import Stack from '@mui/material/Stack';
 import { Button, Grid } from "@mui/material";
-import ButtonGroup from '@mui/material/ButtonGroup';
 import TablaRankings from "../components/tablaRankings";
+import Header from "../components/header";
+import SectionBuy from "../components/sectionBuy";
 import TextField from "@mui/material/TextField";
 
 
@@ -16,12 +17,39 @@ const Home = () => {
 
     const [costoDeProducto, setCostoDeProducto] = React.useState(15)
     const styles = {
-        estiloCaja: {
+        styleBox: {
             backgroundColor: "black",
             width: "absolute",
-            height: "50px"
+            height: "50px",
+            alignItems: "right",
+            justifyContent: "right",
 
+        },
+        mainimage: {
+            backgroundSize: "cover",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            paddingTop: "18%",
+            height: "500px",
+            backgroundImage: "url(https://wallpapercave.com/wp/bkiwp42.jpg)",
+            width: "absolute"
+
+        },
+        section:{
+            width: "80%",
+        alignContent: "spaceBetween"
+        },
+        btngroup:{
+            backgroundColor: "black",
+            backgroundSize: "cover",
+            
+            width: "cover"  
+        },
+        gridcontent:{
+            alignContent: "spaceBetween" 
         }
+
     }
 
     const handlChangeUserName = (event) => {
@@ -29,90 +57,17 @@ const Home = () => {
     }
 
 
-
-
-    const imgprincipal = {
-        backgroundSize: "cover",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        paddingTop: "18%",
-        height: "500px",
-        backgroundImage: "url(https://wallpapercave.com/wp/bkiwp42.jpg)",
-
-        width: "absolute"
-    }
-    const seccion = {
-        width: "80%",
-        alignContent: "spaceBetween"
-
-
-    }
-    const btngroup = {
-        backgroundColor: "black",
-        backgroundSize: "absolute",
-        justifyContent: "center",
-        width: "absolute"
-    }
-    const btng2 = {
-        width: "100%",
-        alignItems: "center",
-        justifyContent: "center",
-    }
-    const i1 = {
-        alignItems: "center",
-        justifyContent: "center",
-        paddingTop: "18%",
-        height: "70%",
-        width: "70%",
-        backgroundImage: "url(https://png.pngtree.com/png-clipart/20201209/original/pngtree-christmas-unboxing-day-png-image_5680724.jpg)",
-        backgroundSize: "cover",
-        backgroundPosition: "50%"
-
-
-    }
-    const i2 = {
-        alignItems: "center",
-        justifyContent: "center",
-        paddingTop: "18%",
-        height: "80%",
-        width: "80%",
-        backgroundImage: "url(https://elvortex.com/wp-content/uploads/2020/06/Digimon-Adventure-Regresa-FT.jpg)",
-        backgroundSize: "cover",
-        backgroundPosition: "50%"
-
-
-    }
-    const i3 = {
-        alignItems: "center",
-        justifyContent: "center",
-        paddingTop: "18%",
-        height: "80%",
-        width: "80%",
-        backgroundImage: "url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6qXDhYwZl_0h31lfOqoitJrSbZEkUzCQukA&usqp=CAU)",
-        backgroundSize: "cover",
-        backgroundPosition: "50%"
-
-
-    }
-    const gridcon = {
-        alignContent: "spaceBetween"
-
-    }
-
-
     return (
         <Box>
 
 
-            <Stack sx={styles.estiloCaja} direction="Row">
-                <div className="" >
-                </div >
+            <Stack sx={styles.styleBox} direction="Row">
+                <Header />
 
             </Stack>
 
 
-            <Stack sx={imgprincipal} direction="Row">
+            <Stack sx={styles.mainimage} direction="Row">
                 <div>
                     <br />
                     <br />
@@ -126,27 +81,27 @@ const Home = () => {
             <br />
             <Grid container>
                 <Grid item xs={12} lg={4}>
-                    <p><img src="https://i.pinimg.com/originals/14/6e/fd/146efd0e37739caff3bc9d8c3a74cdcd.jpg" height="224px" width="80%" alt="" /> <br /><br /><center><Skeleton sx={seccion} animation="wave" /></center><br /><center><Skeleton sx={seccion} animation="wave" /></center><br /><center><Skeleton sx={seccion} animation="wave" /></center></p>
+                    <p><img src="https://i.pinimg.com/originals/14/6e/fd/146efd0e37739caff3bc9d8c3a74cdcd.jpg" height="224px" width="80%" alt="" /> <br /><br /><center><Skeleton sx={styles.section} animation="wave" /></center><br /><center><Skeleton sx={styles.section} animation="wave" /></center><br /><center><Skeleton sx={styles.section} animation="wave" /></center></p>
                 </Grid>
                 <Grid item xs={12} lg={4}>
-                    <p><img src="https://i.pinimg.com/originals/14/6e/fd/146efd0e37739caff3bc9d8c3a74cdcd.jpg" height="224px" width="80%" alt="" /> <br /><br /><center><Skeleton sx={seccion} animation="wave" /></center><br /><center><Skeleton sx={seccion} animation="wave" /></center><br /><center><Skeleton sx={seccion} animation="wave" /></center></p>
+                    <p><img src="https://i.pinimg.com/originals/14/6e/fd/146efd0e37739caff3bc9d8c3a74cdcd.jpg" height="224px" width="80%" alt="" /> <br /><br /><center><Skeleton sx={styles.section} animation="wave" /></center><br /><center><Skeleton sx={styles.section} animation="wave" /></center><br /><center><Skeleton sx={styles.section} animation="wave" /></center></p>
                 </Grid>
                 <Grid item xs={12} lg={4}>
-                    <p><img src="https://i.pinimg.com/originals/14/6e/fd/146efd0e37739caff3bc9d8c3a74cdcd.jpg" height="224px" width="80%" alt="" /> <br /><br /><center><Skeleton sx={seccion} animation="wave" /></center><br /><center><Skeleton sx={seccion} animation="wave" /></center><br /><center><Skeleton sx={seccion} animation="wave" /></center></p>
+                    <p><img src="https://i.pinimg.com/originals/14/6e/fd/146efd0e37739caff3bc9d8c3a74cdcd.jpg" height="224px" width="80%" alt="" /> <br /><br /><center><Skeleton sx={styles.section} animation="wave" /></center><br /><center><Skeleton sx={styles.section} animation="wave" /></center><br /><center><Skeleton sx={styles.section} animation="wave" /></center></p>
                 </Grid>
 
 
 
             </Grid>
             <Grid>
-                <TextField label="Usuario" placeholder="usuario" value={userName} onChange={(e) => {handlChangeUserName(e)}} />
+                <TextField label="Usuario" placeholder="usuario" value={userName} onChange={(e) => { handlChangeUserName(e) }} />
                 <Box>el usuario es: {userName}</Box>
 
 
-                <TextField  label="Costo de producto" placeholder="Costo de producto" value={costoDeProducto} onChange={(e) => {setCostoDeProducto(e)}} />
+                <TextField label="Costo de producto" placeholder="Costo de producto" value={costoDeProducto} onChange={(e) => { setCostoDeProducto(e) }} />
                 <Box>Costo mas IVA {Number.parseInt(costoDeProducto) * 1.16}</Box>
-                
-                <Grid sx={btngroup} item xs={12} lg={12}>
+
+                <Grid sx={styles.btngroup} item xs={12} lg={12}>
                     {/* <p> */}
                     {/* <ButtonGroup sx={btng2} variant="contained" color="error" aria-label="outlined primary button group">
                             <Button>Rank</Button>
@@ -178,19 +133,9 @@ const Home = () => {
             <Box>
 
                 <br />
-                <Grid sx={gridcon} container>
-                    <p></p>
-                    <Grid sx={i1} item xs={12} lg={4}><Button variant="contained" color="error" size="large">Download</Button><br /><br /></Grid>
-                    <Grid sx={i2} item xs={12} lg={4}><Button variant="contained" color="error" size="large">Download</Button><br /><br /></Grid>
-                    <Grid sx={i3} item xs={12} lg={4}><Button variant="contained" color="error" size="large">Download</Button><br /><br /></Grid>
-
-                    <br />
-
-                </Grid>
+                <SectionBuy />
                 <br />
-                <Grid container>
-
-                </Grid>
+                
 
 
                 <br />
