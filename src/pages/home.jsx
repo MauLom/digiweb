@@ -21,8 +21,8 @@ const Home = () => {
             backgroundColor: "black",
             width: "absolute",
             height: "50px",
-            alignItems: "right",
-            justifyContent: "right",
+            alignItems: "left",
+            justifyContent: "left",
 
         },
         mainimage: {

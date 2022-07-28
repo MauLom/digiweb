@@ -1,10 +1,10 @@
 import * as React from 'react'
-import { Button, TextField, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from '@mui/material';
+import { Button, ButtonGroup, TextField, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from '@mui/material';
 
 
-const Header=() =>{
-   
-    const [open, setOpen] = React.useState(false);
+const Header = () => {
+
+  const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -14,13 +14,19 @@ const Header=() =>{
     setOpen(false);
   };
 
-    return(
-        <div>
-            <br />
-            <Button variant="outlined" color="error" onClick={handleClickOpen}>Login</Button>
-            <Dialog open={open} onClose={handleClose}>
+  return (
+    <div>
+      <br />
+      <ButtonGroup variant="text" aria-label="text button group">
+        <Button onClick={handleClickOpen}><font color="white">Login</font></Button>
+        <Button><font color="white">Forum</font></Button>
+        <Button><font color="white">Market</font></Button>
+        <Button><font color="white">News</font></Button>
 
-                <center><DialogTitle>Login to Account <br /><hr /></DialogTitle></center>
+      </ButtonGroup>
+      <Dialog open={open} onClose={handleClose}>
+
+        <center><DialogTitle>Login to Account <br /><hr /></DialogTitle></center>
         <DialogContent>
 
           <DialogContentText>
@@ -53,20 +59,20 @@ const Header=() =>{
           />
         </DialogContent>
         <DialogActions>
-            
+
 
         </DialogActions>
         <center><Button variant="outlined" color="error">Login</Button> <br />
-            <Button variant="text">Forgot password?</Button> <br />
-            <Button variant="text">Register here</Button>
-            <br />
-            <Button onClick={handleClose}>Cancel</Button>
+          <Button variant="text">Forgot password?</Button> <br />
+          <Button variant="text">Register here</Button>
+          <br />
+          <Button onClick={handleClose}>Cancel</Button>
 
 
 
-            </center>
+        </center>
       </Dialog>
-            </div>
-    )
+    </div>
+  )
 }
 export default Header;
