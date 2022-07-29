@@ -35,7 +35,6 @@ const SectionBuy = () => {
         }
     }
     const [open, setOpen] = React.useState(false);
-
     const handleClickOpen = () => {
         setOpen(true);
     };
@@ -43,7 +42,6 @@ const SectionBuy = () => {
     const handleClose = () => {
         setOpen(false);
     };
-
     return (
         <Grid sx={styles.gridcontent} container>
             <p></p>
@@ -77,7 +75,6 @@ const SectionBuy = () => {
 
         </Grid>
     )
-
 }
 export default SectionBuy;
 
