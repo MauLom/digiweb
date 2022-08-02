@@ -1,41 +1,13 @@
 import * as React from 'react'
-import { Button, TextField, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Grid, Stack } from '@mui/material';
+import { Button, TextField, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Grid } from '@mui/material';
 
 const SectionBuy = () => {
-    const styles = {
-        image1: {
-            
-            height: "300px",
-            width: "90%",
-            backgroundImage: "url(https://png.pngtree.com/png-clipart/20201209/original/pngtree-christmas-unboxing-day-png-image_5680724.jpg)",
-            backgroundSize: "cover",
-            borderRadius:"30px",
+   
+    const image1 = process.env.PUBLIC_URL + "/present1.png";
+    const image2 = process.env.PUBLIC_URL + "/present2.png";
+    const image3 = process.env.PUBLIC_URL + "/present3.png";
 
-        },
-        image2: {
-            
-            height: "300px",
-            width: "90%",
-            backgroundImage: "url(https://elvortex.com/wp-content/uploads/2020/06/Digimon-Adventure-Regresa-FT.jpg)",
-            backgroundSize: "cover",
-            borderRadius:"30px",
-
-        },
-        image3: {
-           
-            height: "300px",
-            width: "90%",
-            backgroundImage: "url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6qXDhYwZl_0h31lfOqoitJrSbZEkUzCQukA&usqp=CAU)",
-            backgroundSize: "cover",
-            borderRadius:"30px",
-
-        },
-        imgcontainer:{
-            width: "80%"
-
-
-        }
-    }
+    
     const [open, setOpen] = React.useState(false);
     //const handleClickOpen = () => {
       //  setOpen(true);
@@ -45,11 +17,11 @@ const SectionBuy = () => {
         setOpen(false);
     };
     return (
-        <Grid sx={styles.imgcontainer} container>
+        <Grid  container>
             <p></p>
-            <Grid item xs={12} lg={4}><Stack sx={styles.image1}> </Stack><br /></Grid>
-            <Grid item xs={12} lg={4}><Stack sx={styles.image2}> </Stack> <br /></Grid>
-            <Grid item xs={12} lg={4}><Stack sx={styles.image3}> </Stack> <br /></Grid>
+            <Grid item xs={12} lg={4}><img src={image1} height="385px" width="80%" alt="" /><br /><br /></Grid>
+            <Grid item xs={12} lg={4}><img src={image2} height="385px" width="80%" alt="" /> <br /><br /></Grid>
+            <Grid item xs={12} lg={4}><img src={image3} height="385px" width="80%" alt="" /> <br /></Grid>
 
             <br />
             <Dialog open={open} onClose={handleClose}>

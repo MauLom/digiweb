@@ -22,10 +22,12 @@ const Home = () => {
         },
         mainimage: {
             backgroundSize: "cover",
+            backgroundPosition: "center center",
             height: "600px",
-            backgroundImage: "url(https://wallpapercave.com/wp/bkiwp42.jpg)",
+            backgroundImage: `url(${process.env.PUBLIC_URL + "/main.png"})`,
             width: "90%",
-            borderRadius: "111px"
+            backgroundRepeat: "no-repeat",
+            borderRadius:"111px"
 
 
         },
@@ -36,10 +38,13 @@ const Home = () => {
         },
         secondimage: {
             backgroundSize: "cover",
-            height: "300px",
-            backgroundImage: "url(https://i.pinimg.com/originals/14/6e/fd/146efd0e37739caff3bc9d8c3a74cdcd.jpg)",
+            backgroundPosition: "center center",
+            height: "350px",
+            backgroundImage: `url(${process.env.PUBLIC_URL + "/second.png"})`,
             width: "90%",
-            borderRadius: "111px"
+            backgroundRepeat: "no-repeat",
+            borderRadius:"111px"
+
         },
         menubuttons: {
             alignItems: "left",

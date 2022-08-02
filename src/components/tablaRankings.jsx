@@ -5,7 +5,7 @@ const TablaRankings = () => {
   const styles = {
     stylecontent: {
       backgroundColor: "rgba(31, 165, 240, 0.66)",
-      opacity: "0.5"
+      opacity: "0.7"
 
     },
     stylerowmain: {
