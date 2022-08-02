@@ -2,16 +2,41 @@ import * as React from 'react'
 import { Button, TextField, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Grid } from '@mui/material';
 
 const SectionBuy = () => {
+    const styles={
+        img1:{
+            backgroundSize: "cover",
+            backgroundPosition: "center center",
+            height: "385px",
+            width: "80%",
+            borderRadius:"111px",
+            backgroundImage: `url(${process.env.PUBLIC_URL + "/present1.png"})`
+        },
+        img2:{
+            backgroundSize: "cover",
+            backgroundPosition: "center center",
+            height: "385px",
+            width: "80%",
+            borderRadius:"111px",
+            backgroundImage: `url(${process.env.PUBLIC_URL + "/present2.png"})`  
+        },
+        img3:{
+            backgroundSize: "cover",
+            backgroundPosition: "center center",
+            height: "385px",
+            width: "80%",
+            borderRadius:"111px",
+            backgroundImage: `url(${process.env.PUBLIC_URL + "/present3.png"})`  
+        }
+    }
    
-    const image1 = process.env.PUBLIC_URL + "/present1.png";
-    const image2 = process.env.PUBLIC_URL + "/present2.png";
-    const image3 = process.env.PUBLIC_URL + "/present3.png";
+    //const image1 = process.env.PUBLIC_URL + "/present1.png";
+    
 
     
     const [open, setOpen] = React.useState(false);
-    //const handleClickOpen = () => {
-      //  setOpen(true);
-    //};
+    const handleClickOpen = () => {
+       setOpen(true);
+    };
 
     const handleClose = () => {
         setOpen(false);
@@ -19,9 +44,9 @@ const SectionBuy = () => {
     return (
         <Grid  container>
             <p></p>
-            <Grid item xs={12} lg={4}><img src={image1} height="385px" width="80%" alt="" /><br /><br /></Grid>
-            <Grid item xs={12} lg={4}><img src={image2} height="385px" width="80%" alt="" /> <br /><br /></Grid>
-            <Grid item xs={12} lg={4}><img src={image3} height="385px" width="80%" alt="" /> <br /></Grid>
+            <Grid item xs={12} lg={4}><Button sx={styles.img1} onClick={handleClickOpen}></Button><br /><br /></Grid>
+            <Grid item xs={12} lg={4}><Button sx={styles.img2} onClick={handleClickOpen}></Button><br /><br /></Grid>
+            <Grid item xs={12} lg={4}><Button sx={styles.img3} onClick={handleClickOpen}></Button><br /><br /></Grid>
 
             <br />
             <Dialog open={open} onClose={handleClose}>
