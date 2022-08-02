@@ -1,55 +1,55 @@
 import * as React from 'react'
-import { Button, TextField, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Grid } from '@mui/material';
+import { Button, TextField, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Grid, Stack } from '@mui/material';
 
 const SectionBuy = () => {
     const styles = {
         image1: {
-            alignItems: "center",
-            justifyContent: "center",
-            paddingTop: "18%",
-            height: "70%",
-            width: "70%",
+            
+            height: "300px",
+            width: "90%",
             backgroundImage: "url(https://png.pngtree.com/png-clipart/20201209/original/pngtree-christmas-unboxing-day-png-image_5680724.jpg)",
             backgroundSize: "cover",
-            backgroundPosition: "50%"
+            borderRadius:"30px",
+
         },
         image2: {
-            alignItems: "center",
-            justifyContent: "center",
-            paddingTop: "18%",
-            height: "80%",
-            width: "80%",
+            
+            height: "300px",
+            width: "90%",
             backgroundImage: "url(https://elvortex.com/wp-content/uploads/2020/06/Digimon-Adventure-Regresa-FT.jpg)",
             backgroundSize: "cover",
-            backgroundPosition: "50%"
+            borderRadius:"30px",
+
         },
         image3: {
-            alignItems: "center",
-            justifyContent: "center",
-            paddingTop: "18%",
-            height: "80%",
-            width: "80%",
+           
+            height: "300px",
+            width: "90%",
             backgroundImage: "url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6qXDhYwZl_0h31lfOqoitJrSbZEkUzCQukA&usqp=CAU)",
             backgroundSize: "cover",
-            backgroundPosition: "50%"
+            borderRadius:"30px",
+
+        },
+        imgcontainer:{
+            width: "80%"
+
+
         }
     }
     const [open, setOpen] = React.useState(false);
-
-    const handleClickOpen = () => {
-        setOpen(true);
-    };
+    //const handleClickOpen = () => {
+      //  setOpen(true);
+    //};
 
     const handleClose = () => {
         setOpen(false);
     };
-
     return (
-        <Grid sx={styles.gridcontent} container>
+        <Grid sx={styles.imgcontainer} container>
             <p></p>
-            <Grid sx={styles.image1} item xs={12} lg={4}><Button variant="contained" color="error" size="large" onClick={handleClickOpen}>Download</Button><br /><br /></Grid>
-            <Grid sx={styles.image2} item xs={12} lg={4}><Button variant="contained" color="error" size="large" onClick={handleClickOpen}>Download</Button><br /><br /></Grid>
-            <Grid sx={styles.image3} item xs={12} lg={4}><Button variant="contained" color="error" size="large" onClick={handleClickOpen}>Download</Button><br /><br /></Grid>
+            <Grid item xs={12} lg={4}><Stack sx={styles.image1}> </Stack><br /></Grid>
+            <Grid item xs={12} lg={4}><Stack sx={styles.image2}> </Stack> <br /></Grid>
+            <Grid item xs={12} lg={4}><Stack sx={styles.image3}> </Stack> <br /></Grid>
 
             <br />
             <Dialog open={open} onClose={handleClose}>
@@ -77,7 +77,6 @@ const SectionBuy = () => {
 
         </Grid>
     )
-
 }
 export default SectionBuy;
 
