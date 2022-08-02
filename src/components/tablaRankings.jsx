@@ -4,8 +4,9 @@ import { Grid, Stack, Table, TableBody, TableCell, TableContainer, TableHead, Ta
 const TablaRankings = () => {
   const styles = {
     stylecontent: {
-      backgroundImage: "url(https://img2.rtve.es/im/5829788/?w=900)",
-      backgroundSize: "cover",
+      backgroundColor: "rgba(31, 165, 240, 0.66)",
+      opacity: "0.5"
+
     },
     stylerowmain: {
       backgroundColor: "black",
@@ -45,13 +46,11 @@ const TablaRankings = () => {
                     key={row.name}
                     sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                   >
-                    <TableCell component="th" scope="row">
-                      {row.rank}
-                    </TableCell>
-                    <TableCell align="left">{row.name}</TableCell>
-                    <TableCell align="left">{row.vocation}</TableCell>
-                    <TableCell align="left">{row.level}</TableCell>
-                    <TableCell align="left">{row.server}</TableCell>
+                    <TableCell component="th" scope="row"><font color="white">{row.rank}</font></TableCell>
+                    <TableCell align="left"><font color="white">{row.name}</font></TableCell>
+                    <TableCell align="left"><font color="white">{row.vocation}</font></TableCell>
+                    <TableCell align="left"><font color="white">{row.level}</font></TableCell>
+                    <TableCell align="left"><font color="white">{row.server}</font></TableCell>
                   </TableRow>
                 ))}
               </TableBody>
