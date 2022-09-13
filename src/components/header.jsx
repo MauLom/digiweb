@@ -1,13 +1,11 @@
 import * as React from 'react'
 import { Stack, Button, ButtonGroup, TextField, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from '@mui/material';
-
-
-const Header = () => {
+import { Link } from "react-router-dom";const Header = () => {
   const styles = {
 
     Stylediv: {
       alignItems: "left",
-      justifyContent: "space-between",
+      justifyContent: "flex-start",
       width: "100%",
       paddingTop: "5px",
       paddingLeft: "10px"
@@ -48,7 +46,7 @@ const Header = () => {
         <ButtonGroup variant="text" aria-label="text button group">
           <Button><font color="white">Forum</font></Button>
           <Button><font color="white">Market</font></Button>
-          <Button><font color="white">News</font></Button>
+          <Button><Link to="/news"><font color="white">News</font></Link></Button>
         </ButtonGroup>
 
       </Stack>

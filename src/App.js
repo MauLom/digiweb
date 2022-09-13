@@ -1,11 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
-import Home from './pages/home';
+import MutableContent from './pages/mutableContent';
 
 function App() {
   return (
     <div className="App">
-      <Home/>
+      <MutableContent/>
     </div>
   );
 }
