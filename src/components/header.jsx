@@ -44,7 +44,7 @@ import { Link } from "react-router-dom";const Header = () => {
         <Button sx={styles.stylebutton} variant="contained" onClick={handleClickOpen}>Login     </Button>
 
         <ButtonGroup variant="text" aria-label="text button group">
-          <Button><font color="white">Forum</font></Button>
+          <Button><Link to="/"><font color="white">Forum</font></Link></Button>
           <Button><font color="white">Market</font></Button>
           <Button><Link to="/news"><font color="white">News</font></Link></Button>
         </ButtonGroup>
